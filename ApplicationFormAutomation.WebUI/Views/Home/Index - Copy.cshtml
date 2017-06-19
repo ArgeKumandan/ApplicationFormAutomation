@@ -1,0 +1,137 @@
+﻿@model ApplicationFormAutomation.WebUI.Models.Form
+
+<form class="well form-horizontal" action=" " method="post" id="contact_form">
+    <fieldset>
+        <!-- Form Name -->
+        <legend>@Model.Title</legend>
+        <!-- Text input-->
+        <div class="form-group">
+            <label for="first_name" class="col-md-4 control-label">Ad</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="first_name" name="first_name" placeholder="Ad" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label">Soyad</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="last_name" placeholder="Soyad" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label">E-Mail</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input name="email" placeholder="E-Mail" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Telefon #</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                    <input name="phone" placeholder="(212)212-2123" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label">GSM #</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                    <input name="gsm" placeholder="(555)555-5555" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Addres</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input name="address" placeholder="Addres" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Şehir</label>
+            <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="city" class="form-control selectpicker">
+                        <option selected>İl Seçiniz</option>
+                        <option value="adana.html">ADANA</option>
+                        <option value="agri.html">AĞRI</option>
+                        <option value="alanya.html">ALANYA</option>
+                        <option value="ankara.html">ANKARA</option>
+                        <option value="erzurum.html">ERZURUM</option>
+                        <option value="istanbul.html">İSTANBUL</option>
+                        <option value="izmir.html">İZMİR</option>
+                        <option value="konya.html">KONYA</option>
+                        <option value="malatya.html">MALATYA</option>
+                        <option value="mugla.html">MUĞLA</option>
+                        <option value="sivas.html">SİVAS</option>
+                        <option value="sirnak.html">ŞIRNAK</option>
+                        <option value="tekirdag.html">TEKİRDAĞ</option>
+                        <option value="van.html">VAN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- radio checks -->
+        <div class="form-group">
+            <label class="col-md-4 control-label">Çadır / Bungalov?</label>
+            <div class="col-md-4">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hosting" value="yes" /> Çadır
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hosting" value="no" /> Bungalov
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Text area -->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Açıklama</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <textarea class="form-control" name="comment" placeholder="Açıklama"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Success message -->
+        <div class="alert alert-success" role="alert" id="success_message">
+            Success <i class="glyphicon glyphicon-thumbs-up"></i>
+            Thanks for contacting us, we will get back to you shortly.
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-warning">Kayıt <span class="glyphicon glyphicon-send"></span></button>
+            </div>
+        </div>
+    </fieldset>
+</form>
