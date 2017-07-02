@@ -10,11 +10,15 @@ namespace ApplicationFormAutomation.WebUI.Extensions
         public int ElementIndexNumber { get; set; }
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            //output.TagName = GetTagName();
 
+            //output.TagName = GetTagName();
             if(FormElement.FormElementType == Models.FormElementType.TextBox)
             {
                 new TagHelperOutputs.TextBoxTagHelperBuilder(FormElement, output, ElementIndexNumber);
+            }
+            else if(FormElement.FormElementType == Models.FormElementType.TextArea)
+            {
+                new TagHelperOutputs.TextAreaTagHelperBuilder(FormElement, output, ElementIndexNumber);
             }
             else
             {

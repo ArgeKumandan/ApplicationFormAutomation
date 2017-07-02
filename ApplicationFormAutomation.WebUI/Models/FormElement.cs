@@ -20,6 +20,9 @@ namespace ApplicationFormAutomation.WebUI.Models
         public string Mask { get; set; }
         public bool UseMaskForFreeText { get; set; }
         public int OrderValue { get; set; }
+        [MaxLength(50), Required]
+        public string GlyphIconCss { get; set; }
+        public int? TextAreaRowCount { get; set; }
         public FormElement()
         {
             FormElementOptions = new List<FormElementOption>();

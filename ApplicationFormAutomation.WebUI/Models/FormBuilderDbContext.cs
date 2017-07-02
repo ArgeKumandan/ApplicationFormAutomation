@@ -13,7 +13,8 @@ namespace ApplicationFormAutomation.WebUI.Models
 
         }
 
-        public DbSet<Form> Form { get; set; }
+        public DbSet<Form> Forms { get; set; }
         public DbSet<FormElement> FormElements { get; set; }
+        public DbSet<FormSubmit> FormSubmits { get; set; }
     }
 }

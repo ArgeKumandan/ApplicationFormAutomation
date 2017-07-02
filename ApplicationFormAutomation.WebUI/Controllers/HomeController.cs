@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace ApplicationFormAutomation.WebUI.Controllers
 {
@@ -15,7 +16,7 @@ namespace ApplicationFormAutomation.WebUI.Controllers
         }
         public IActionResult Index()
         {
-            var model = _dbContext.Form
+            var model = _dbContext.Forms
                 .Include(t=> t.FormElements)
                 .FirstOrDefault();
             return View(model);
@@ -23,6 +24,9 @@ namespace ApplicationFormAutomation.WebUI.Controllers
         [HttpPost]
         public IActionResult Index(FormSubmit answer)
         {
+            answer.CreatedDate = DateTime.Now;
+            _dbContext.FormSubmits.Add(answer);
+            _dbContext.SaveChanges();
             return View();
         }
 

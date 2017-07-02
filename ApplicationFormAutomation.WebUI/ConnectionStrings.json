@@ -1,5 +1,5 @@
 ﻿{
   "ConnectionStrings": {
-    "DefaultConnectionString": "Server=.;Database=FormBuilder;Integrated Security=SSPI;"
+    "DefaultConnectionString": "Server=.;Database=FormBuilder2;Integrated Security=SSPI;"
   }
 }
